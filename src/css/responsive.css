@@ -1,0 +1,46 @@
+@media(min-width: 800px) and (orientation: landscape) {
+    :root {
+        --f-size-medium: 1.5rem;
+        --f-size-large: 2.75rem;
+    }
+
+    main {
+        align-content: center;
+    }
+
+    .logo {
+        margin: clamp(3rem, 70vh - 40rem, 8rem);
+    }
+
+    .app-container {
+        grid-template-columns: repeat(2, 1fr);
+        width: unset;
+        max-width: 58rem;
+        gap: 3rem;
+        padding: 2.5rem;
+        margin-bottom: 10rem;
+    }
+
+    .fields {
+        gap: 3rem;
+    }
+
+    .fields > div {
+        gap: 1rem;
+    }
+
+    .tip__field {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .display {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 2.5rem;
+    }
+
+    .result__title {
+        margin-top: .75rem;
+    }
+}

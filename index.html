@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Space Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+  <!-- reset styles -->
+  <link rel="stylesheet" href="./src/css/reset.css">
+
+  <!-- apply styles -->
+  <link rel="stylesheet" href="./src/css/styles.css">
+
+  <!-- responsive -->
+  <link rel="stylesheet" href="./src/css/responsive.css">
+
+</head>
+
+<body>
+  <main>
+    <h1 class="logo">
+      <img src="./images/logo.svg" alt="Logo">
+    </h1>
+
+    <div class="app-container">
+
+      <form action="" class="fields" id="fields">
+
+        <div>
+          <h2 class="field-title">
+            <span id="bill__title">Bill</span>
+            <label for="bill-amount" class="error"></label>
+          </h2>
+
+          <input type="number" name="bill-amount" id="bill-amount" step="0.01" min="0" placeholder="0" class="number-field bill__number-field">
+        </div>
+
+        <div>
+          <h2 class="field-title">
+            <span id="tip__title">Select Tip %</span>
+            <label for="custom" class="error"></label>
+          </h2>
+
+          <ul class="tip__field">
+            <li class="tip__option">
+              <label for="5" class="tip__btn">5%</label>
+              <input type="radio" name="tip-percent" id="5" class="tip__radio">
+            </li>
+            <li class="tip__option">
+              <label for="10" class="tip__btn">10%</label>
+              <input type="radio" name="tip-percent" id="10" class="tip__radio">
+            </li>
+            <li class="tip__option">
+              <label for="15" class="tip__btn">15%</label>
+              <input type="radio" name="tip-percent" id="15" class="tip__radio">
+            </li>
+            <li class="tip__option">
+              <label for="25" class="tip__btn">25%</label>
+              <input type="radio" name="tip-percent" id="25" class="tip__radio">
+            </li>
+            <li class="tip__option">
+              <label for="50" class="tip__btn">50%</label>
+              <input type="radio" name="tip-percent" id="50" class="tip__radio">
+            </li>
+            <li>
+              <input type="number" name="custom-tip-percent" id="custom" min="0" placeholder="Custom" class="tip__option tip__custom">
+            </li>
+
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="field-title">
+            <span id="people__title">Number of People</span>
+            <label for="people-amount" class="error"></label>
+          </h2>
+
+          <input type="number" name="people-amount" id="people-amount" step="1" min="0" placeholder="0" class="number-field people__number-field">
+        </div>
+
+      </form>
+
+      <div class="display">
+        <table class="result">
+          <tbody>
+            <tr>
+              <td class="result__title">
+                Tip Amount
+                <span class="result__secondary">/ person</span>
+              </td>
+              <td class="result__number">
+                $<span id="result__tip">0.00</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="result__title">
+                Total
+                <span class="result__secondary">/ person</span>
+              </td>
+              <td class="result__number">
+                $<span id="result__total">0.00</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <button id="btn-reset" disabled>Reset</button>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="attribution">
+    <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    </span>
+    <span>Coded by <a href="https://github.com/LucasNgTg">LucasNgTg</a>.</span>
+  </footer>
+  
+  <script src="./src/js/index.js"></script>
+</body>
+
+</html>
